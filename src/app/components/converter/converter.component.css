@@ -1,0 +1,36 @@
+
+form {
+    min-height: calc(100vh - 200px);
+}
+
+.mb-3 {   
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    border-radius: 5px;
+
+    border: 1px solid rgb(228, 223, 223);
+}
+
+.form-select {
+    width: 280px;
+    font-size: 20px;
+    padding-right: 36px;
+}
+
+.form-control {
+    margin-bottom: 16px;
+}
+
+.second-group .btn-group {
+    float: right;
+}
+
+.btn-primary {
+    height: 40px;
+}

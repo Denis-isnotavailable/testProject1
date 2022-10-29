@@ -1,0 +1,62 @@
+<form>
+    <div class="mb-3">
+        <div>
+            <select class="form-select form-select-lg mb-3" 
+            aria-label=".form-select-lg" 
+            name="firstCurrency" 
+            [(ngModel)]="firstCurrency" 
+            on-change="onCurrencyChange()" >                
+                <option *ngFor="let cur of currencies" [value]="cur[0]">
+                    {{cur[0]}} {{cur[1]}}
+                </option>                
+            </select>
+
+            <input type="number" 
+                class="form-control" 
+                placeholder="Quantity" 
+                aria-label="Quantity" 
+                aria-describedby="basic-addon1"
+                name="firstQuantity"
+                [(ngModel)]="firstQuantity" 
+                on-change="onFirstQuantitychange()" >
+
+            <div class="btn-group" role="group" aria-label="Basic">
+                <button type="button" class="btn btn-primary" name="firstCurrencyButton" value="UAH" on-click="onClick($event)" >UAH</button>
+                <button type="button" class="btn btn-primary" name="firstCurrencyButton" value="USD" on-click="onClick($event)" >USD</button>
+                <button type="button" class="btn btn-primary" name="firstCurrencyButton" value="EUR" on-click="onClick($event)" >EUR</button>
+            </div>
+        </div> 
+        
+        <button class="btn btn-primary" type="button" height="20">COUNT</button>
+        
+        <div class="second-group">
+            <select class="form-select form-select-lg mb-3" 
+                aria-label=".form-select-lg" 
+                name="secondCurrency" 
+                [(ngModel)]="secondCurrency" 
+                on-change="onCurrencyChange()" >                
+                <option *ngFor="let cur of currencies" [value]="cur[0]">
+                    {{cur[0]}} {{cur[1]}}
+                </option>
+            </select>
+
+            <input type="number" 
+                class="form-control" 
+                placeholder="Quantity" 
+                aria-label="Quantity" 
+                aria-describedby="basic-addon1" 
+                name="secondQuantity"
+                [(ngModel)]="secondQuantity" 
+                on-change="onSecondQuantitychange()" >
+
+            <div class="btn-group" role="group" aria-label="Basic">
+                <button type="button" class="btn btn-primary" name="secondCurrencyButton" value="UAH"
+                    on-click="onClick($event)">UAH</button>
+                <button type="button" class="btn btn-primary" name="secondCurrencyButton" value="USD"
+                    on-click="onClick($event)">USD</button>
+                <button type="button" class="btn btn-primary" name="secondCurrencyButton" value="EUR"
+                    on-click="onClick($event)">EUR</button>
+            </div>
+        </div>
+    </div>
+</form>
