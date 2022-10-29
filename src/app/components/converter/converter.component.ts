@@ -33,7 +33,7 @@ export class ConverterComponent implements OnInit {
 
     this.currencyService.getAllCurrencies(this.firstCurrency).subscribe({
       next: response => {          
-        // this.currencies = Object.keys(response.rates);
+        
         this.currencies = Object.keys(response.rates).map(currency => {
           const key = currency.toLowerCase();
           const country = this.countries[key] || "Unknown";
