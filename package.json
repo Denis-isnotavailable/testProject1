@@ -1,6 +1,7 @@
 {
   "name": "test-project",
   "version": "0.0.0",
+  "homepage": "https://denis-isnotavailable.github.io/testProject1/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
